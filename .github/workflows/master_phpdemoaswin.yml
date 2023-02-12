@@ -38,7 +38,7 @@ jobs:
           path: .
 
   deploy:
-    runs-on: runs-on: self-hosted
+    runs-on: self-hosted
     needs: build
     environment:
       name: 'Production'
@@ -50,11 +50,11 @@ jobs:
         with:
           name: php-app
 
-      - name: 'Deploy to Azure Web App'
-        uses: azure/webapps-deploy@v2
-        id: deploy-to-webapp
-        with:
-          app-name: 'phpdemoaswin'
-          slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_57459F1F08774DF0B66A142DEDE282D6 }}
-          package: .
+     # - name: 'Deploy to Azure Web App'
+    #    uses: azure/webapps-deploy@v2
+     #   id: deploy-to-webapp
+      #  with:
+       #   app-name: 'phpdemoaswin'
+        #  slot-name: 'Production'
+         # publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_57459F1F08774DF0B66A142DEDE282D6 }}
+          #package: .
