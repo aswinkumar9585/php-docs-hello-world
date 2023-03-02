@@ -1,4 +1,4 @@
-name: Build and deploy PHP app to Azure Web App - asasasasasasas
+name: Build and deploy PHP app to Azure Web App - aswinaswin
 
 on:
   push:
@@ -51,7 +51,7 @@ jobs:
         uses: azure/webapps-deploy@v2
         id: deploy-to-webapp
         with:
-          app-name: 'asasasasasasas'
+          app-name: 'aswinaswin'
           slot-name: 'production'
-          publish-profile: ${{ secrets.AzureAppService_PublishProfile_2222cb5efc094c08b396c07d730689a4 }}
+          publish-profile: ${{ secrets.AzureAppService_PublishProfile_b25beb885c914e599696a4cf4de5bf84 }}
           package: .
